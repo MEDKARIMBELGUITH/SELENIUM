@@ -12,9 +12,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import junit.framework.Assert;
 
 public class CompteFb {
 	WebDriver driver1;
+	private String message;
 	
 	@Given("ouvrir navigateur")
 	public void ouvrir_navigateur() {
@@ -108,6 +110,9 @@ public class CompteFb {
 
 	@Then("compte FB cree")
 	public void compte_fb_cree() { 
+		
+		Assert.assertEquals("entrer le code de votre mail", message);
+		System.out.println("inscription validee");
 		
 		
 	}
